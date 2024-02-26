@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'anim1';
+    src: url('fonts/badaboom/BADABB__.TTF') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'bit';
+    src: url('fonts/8-bit-operator/8bitOperatorPlus8-Regular.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'anim2';
+    src: url('fonts/ttg/ttg_by_westralinc-dbnnkt8.ttf')format('truetype');
+  }

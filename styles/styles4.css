@@ -1,0 +1,268 @@
+*{
+    margin: auto;
+    padding: 0%;
+}
+header{
+    width: 100%;
+    height: 10vh;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+}
+.logo{
+    width: 5%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: row;
+    transform: rotate(-5deg);
+}
+.logo h1{
+    font-family: 'anim2';
+    font-size: 3em;
+    color:#fad400;
+}
+.logo h2{
+    font-family: 'anim1';
+    font-size: 4em;
+    color: #00c2ff;
+}
+.logos{
+    display: flex;
+    flex-direction: row;
+    width: 20%;
+    margin-right: 0;
+}
+.logos img {
+    max-width: 40%; 
+    height: auto; }
+nav {
+    width: 100%;
+    height: 5vh;
+    background-color: #fad400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin: 0 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.4em;
+    font-family: 'bit';
+    font-weight: bold;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+li{
+    position: relative;
+    margin: auto;
+}
+nav ul,
+nav ul ul {
+    font-family: 'bit';
+    font-weight: bolder;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.navi {
+    font-size: 1.4em;
+    transition: transform 0.5s ease;
+}
+
+.navi:hover {
+    transform: scale(1.4);
+}
+nav ul li {
+    position: relative;
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+}
+
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+nav ul li:hover > ul {
+    display: block;
+}
+
+nav ul ul li {
+    width: 100%;
+}
+
+nav ul ul li:hover {
+    background-color: #f0f0f0;
+    background-color: #cbcbcb;
+}
+section{
+    width: 100%;
+    height: 85vh;
+    background-image:url(../img/fondo.png);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.arriba{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 60vh;
+}
+.columnauno{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 50vh;
+}
+.columnados {
+    width: 40%;
+}
+.columnados img{
+    max-width: 100%;
+    height: auto    ;
+}
+.miencabezado{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+.miencabezado h1{
+    font-size: 3em;
+    font-family: bit;
+    color: #00c2ff;
+    text-shadow: 
+    -3px -3px 0 #000,  
+    3px -3px 0 #000,
+    -3px 3px 0 #000,
+    3px 3px 0 #000,
+    0px 0px 10px #000;
+}
+.logosimbolo{
+    display: flex;
+    flex-direction: row;
+    transform: rotate(-5deg);
+}
+.miencabezado h2{
+    font-family: 'anim2';
+    font-size: 8em;
+    color:#fad400;
+    right: 20%;
+    text-shadow: 
+    -3px -3px 0 #000,  
+    3px -3px 0 #000,
+    -3px 3px 0 #000,
+    3px 3px 0 #000,
+    0px 0px 10px #000;
+}
+.miencabezado h3{
+    font-family: 'anim1';
+    font-size: 10em;
+    color: #00c2ff;
+    animation: pulso 1.5s infinite alternate;
+    text-shadow: 
+    -3px -3px 0 #000,  
+    3px -3px 0 #000,
+    -3px 3px 0 #000,
+    3px 3px 0 #000,
+    0px 0px 5px #000;
+}
+.parrafo{
+    width: 80%;
+    font-size: 1.7em;
+    text-align:center;
+    font-family: bit;
+    font-weight: bold;
+}
+.parrafo p{
+    color: white; 
+    text-shadow: 
+        -3px -3px 0 black,  
+        3px -3px 0 black,
+        -3px 3px 0 black,
+        3px 3px 0 black;
+}
+.abajo{
+    display: flex;
+    flex-direction: row;
+    width: 20%;
+    height: 10vh;
+    border-radius: 5em;
+}
+.abajo h1{
+    text-align: center;
+    letter-spacing: 0.2em;
+    font-family: anim1;
+    font-size: 2em;
+    text-shadow: 
+        -2px -2px 0 black,  
+        2px -2px 0 black,
+        -2px 2px 0 black,
+        2px 2px 0 black;
+    animation: boing 0.7s infinite alternate;
+}
+.abajo h1 a{
+    text-decoration: none;
+    color:#fad400;
+}
+.abajo  img{
+    max-width: 20%;
+    height: auto;
+}
+#manizq{
+    animation: movd 0.7s infinite alternate;
+}
+#mander{
+    animation: movi 0.7s infinite alternate;
+}
+@keyframes boing {
+    from{
+        transform: scale(1);
+    }to{
+        transform: scale(1.4);
+    }
+}
+@keyframes movd {
+    from{
+        transform: translateX(0);
+    }to{
+        transform: translateX(10%);
+    }
+}
+@keyframes movi {
+    from{
+        transform: translateX(0);
+    }to{
+        transform: translateX(-10%);
+    }
+}

@@ -1,0 +1,101 @@
+
+*{
+    margin: auto;
+    padding: 0%;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-image:url(../img/fondo.png);
+}
+#contenedor{
+    position: relative;
+    margin: auto;
+    width: 60%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+#titulo{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20%;
+    transform: rotate(-5deg);
+    text-shadow: 
+    -3px -3px 0 #000,  
+    3px -3px 0 #000,
+    -3px 3px 0 #000,
+    3px 3px 0 #000,
+    0px 0px 10px #000;
+}
+#titulo h2 {
+    font-family: 'anim1';
+    font-size: 10em;
+    color: #00c2ff;
+    text-shadow: 
+        -3px -3px 0 #000,  
+        3px -3px 0 #000,
+        -3px 3px 0 #000,
+        3px 3px 0 #000,
+        0px 0px 10px #000;
+}
+#titulo h1{
+    font-family: 'anim2';
+    font-size: 8em;
+    color:#fad400;
+}
+#cont-formulario{
+    height: 40vh;
+    width: 40%;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+form input {
+    width: 90%;
+    height: 5vh;
+    font-family: bit;
+    border: 2px solid black;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    font-size: 1.8em;
+    box-shadow:0px 0px 5px #000 ;
+}
+.boton-imagen {
+    width: 20%;
+    height: 24%;
+    background-image: url('../img/manito.png');
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+    background-color: #ff00c300;
+    transition: transform 0.5s ease;
+}
+
+.boton-imagen:hover {
+    transform: scale(1.4);
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+    height: 20vh;
+}
+footer a{
+    text-decoration: none;
+    font-family: bit;
+    font-size: 2em;
+    color: #fad400;
+    text-align: center;
+    transition: transform 0.5s;
+}
+footer a:hover{
+    transform: scale(1.2);
+}

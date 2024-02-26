@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #090909;
+}
+
+.animacion {
+  position: relative;
+  margin: auto;
+  top: 40vh;
+  display: flex;
+  width: 50%;
+  height: 50vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.titulos {
+  display: flex;
+  align-items: center;
+  transform: rotate(-5deg);
+}
+
+.titulo {
+  font-family: 'anim1';
+  font-size: 10em;
+  color: #00c2ff;
+  animation: pulso 1.5s infinite alternate;
+  text-shadow: 
+  -3px -3px 0 #000,  
+  3px -3px 0 #000,
+  -3px 3px 0 #000,
+  3px 3px 0 #000,
+  0px 0px 5px #000;
+
+}
+
+.titulo-oculto {
+  opacity: 0;
+  font-family: 'anim2';
+  transition: opacity 1s;
+  font-size: 8em;
+  color:#fad400;
+  position: absolute;
+  right: 20%;
+  text-shadow: 
+  -3px -3px 0 #000,  
+  3px -3px 0 #000,
+  -3px 3px 0 #000,
+  3px 3px 0 #000,
+  0px 0px 10px #000;
+  
+}
+
+.subtitulo {
+  font-family: 'bit';
+  font-size: 2em;
+  color: #00c2ff;
+  animation: cascada 1.5s infinite alternate;
+  text-shadow: 
+  -3px -3px 0 #000,  
+  3px -3px 0 #000,
+  -3px 3px 0 #000,
+  3px 3px 0 #000,
+  0px 0px 10px #000;
+}
+
+.detener .titulo {
+  animation-play-state: paused;
+}
+
+.mostrar {
+  opacity: 1;
+  animation: mover-izquierda 1s;
+}
+
+@keyframes pulso {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.6);
+  }
+}
+
+@keyframes cascada {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes mover-izquierda {
+  from {
+    opacity: 0;
+    transform: translateX(15%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.mover-derecha{
+  animation: mover-derecha 1s ease forwards;;
+}
+@keyframes mover-derecha {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(80%);
+  }
+}
