@@ -2,4 +2,5 @@ document.addEventListener("DOMContentLoaded", function() { //esto quiere decir q
     setTimeout(function() {
         window.location.href = "login.php";
       }, 4000);
+      
   });

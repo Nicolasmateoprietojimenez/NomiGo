@@ -18,7 +18,7 @@
             <div id= 'cont-formulario'>
                     <form action="" method="post">
                         <input type="text" placeholder="Nombre Usuario">
-                        <input type="text" placeholder="Nombre Usuario">
+                        <input type="text" placeholder="Contraseña">
                         <button type="submit" class="boton-imagen"></button>
                     </form>
             </div>
