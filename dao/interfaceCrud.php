@@ -7,9 +7,9 @@ interface crudgo{
     public function listar();
 }
 interface crudgox{
-    public function registrar(familia $familiar);
-    public function modificar(familia $familiar);
-    public function eliminar(familia $familiar);
+    public function registrar(Familia $familiar);
+    public function modificar(Familia $familiar);
+    public function eliminar(Familia $familiar);
     //public function buscar($campo,$dato);
     public function listar();
 }

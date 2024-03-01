@@ -1,5 +1,5 @@
 <?php
-class familia{
+class Familia{
     private $documento_fam;
     private $nombre;
     private $apellido;

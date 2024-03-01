@@ -10,24 +10,22 @@
 </head>
 <body>
 <?php 
-require('../vista/insertarFamilia.php');
-require('../dao/metodosFamilia.php');
-$dao=new nomiGo();
+require('./vista/insertarFamilia.php');
+require('./dao/metodosFamilia.php');
+$dao=new MetodosFamilia();
 if (isset($_GET['boton'])) {
-    $docu = $_GET['doc'];
-    $nom = $_GET['nombre'];
-    $ape = $_GET['apellido'];
-    $lugarN = $_GET['lugarN'];
-    $fechaN = $_GET['fechaN'];
-    $fechaE = $_GET['fechaE'];
-    $sexo = $_GET['genero'];
-    $correo = $_GET['correo'];
-    $nombreU = $_GET['nombreU'];
-    $contrasena = $_GET['contrasena']; 
-    $a = new usuario($docu, $nom, $ape, $lugarN, $fechaN, $fechaE, $sexo, $correo, $nombreU, $contrasena);
-    $dao->registrar($a);
+    $documento_fam = $_GET['doc'];
+    $nombre = $_GET['nombre'];
+    $apellido = $_GET['apellido'];
+    $sexo = $_GET['sexo'];
+    $parentezco = $_GET['parentezco'];
+    $fecha_nac = $_GET['fechaN'];
+    
+    $familiar = new Familia($documento_fam, $nombre, $apellido, $sexo, $parentezco, $fecha_nac);
+    $dao->registrar($familiar);
     echo "REGISTRO INSERTADO CON ÉXITO";    
 }
+
            
 ?>    
 </body>

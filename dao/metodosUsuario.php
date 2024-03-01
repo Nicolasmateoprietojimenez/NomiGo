@@ -2,7 +2,7 @@
 
 include('interfaceCrud.php');
 include ('../conexion/conexion.php');
-include ('../modelo/familia.php');
+include ('../modelo/usuario.php');
 
 class nomiGo extends Conexion implements crudgo{
 
