@@ -9,10 +9,10 @@
 <body>
 <?php 
 
-require('../dao/metodosUsuario.php');
+require('../dao/metodosFamilia.php');
 $dao=new nomiGo();
-$usuario=$dao->listar();
-require('../vista/listarUsuario.php');
+$familiar=$dao->listar();
+require('../vista/listarFamilia.php');
 ?>    
 </body>
 </html>

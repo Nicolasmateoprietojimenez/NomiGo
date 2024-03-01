@@ -10,8 +10,8 @@
 </head>
 <body>
 <?php 
-require('../vista/insertarUsuario.php');
-require('../dao/metodosUsuario.php');
+require('../vista/insertarFamilia.php');
+require('../dao/metodosFamilia.php');
 $dao=new nomiGo();
 if (isset($_GET['boton'])) {
     $docu = $_GET['doc'];
