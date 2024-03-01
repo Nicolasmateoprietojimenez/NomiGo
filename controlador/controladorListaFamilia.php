@@ -10,9 +10,10 @@
 <?php 
 
 require('../dao/metodosFamilia.php');
-$dao=new nomiGo();
-$familiar=$dao->listar();
+$dao=new MetodosFamilia();
+$familiares=$dao->listar();
 require('../vista/listarFamilia.php');
+
 ?>    
 </body>
 </html>

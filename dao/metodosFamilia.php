@@ -16,7 +16,7 @@ class MetodosFamilia extends Conexion implements crudgox{
                 $parentezco = $familiar->getParentezco();
                 $fecha_nac = $familiar->getFechaNac(); 
                 
-                $sql = "INSERT INTO familia VALUES (?, ?, ?, ?, ?, ?)"; 
+                $sql = "INSERT INTO familiar VALUES (?, ?, ?, ?, ?, ?)"; 
                 $stmt = $this->getCnx()->prepare($sql);
                 $stmt->execute([$documento_fam, $nombre, $apellido, $sexo, $parentezco, $fecha_nac]); 
             } else {
@@ -35,7 +35,7 @@ class MetodosFamilia extends Conexion implements crudgox{
         $fecha_nac = $familiar->getFechaNac(); // Cambiado a fecha_nac
         
         try {
-            $stmt=$this->getCnx()->prepare("UPDATE familia " . 
+            $stmt=$this->getCnx()->prepare("UPDATE familiar " . 
                                            "SET nombre = ?, " .
                                            "apellido = ?, " .
                                            "sexo = ?, " . 
@@ -50,18 +50,20 @@ class MetodosFamilia extends Conexion implements crudgox{
 
     public function eliminar(familia $familiar){ // Cambiado a familia      
         $documento_fam = $familiar->getDocumentoFam(); // Cambiado a documento_fam
-        $stmt=$this->getCnx()->prepare("DELETE FROM familia WHERE documento_fam = ?"); // Cambiado a familia
+        $stmt=$this->getCnx()->prepare("DELETE FROM familiar WHERE documento_fam = ?"); // Cambiado a familia
         $stmt->execute([$documento_fam]); // Cambiado a documento_fam       
     }
 
     public function listar(){
-        $lista = null;
+        $lista = array();
         try{    
-            $stmt = $this->getCnx()->prepare("SELECT * FROM familia"); 
-            $lista = array();
+            $stmt = $this->getCnx()->prepare("SELECT * FROM familiar"); 
             $stmt->execute();
-            foreach ($stmt as $key ) {           
-                $familiar = new familia(null, null, null, null, null, null); 
+            $result = $stmt->fetchAll();
+    
+            if ($result) {
+                foreach ($result as $key ) {            
+                    $familiar = new familia(null, null, null, null, null, null); 
                 $familiar->setDocumentoFam($key['documento_fam']);
                 $familiar->setNombre($key['nombre']);
                 $familiar->setApellido($key['apellido']);
@@ -69,14 +71,14 @@ class MetodosFamilia extends Conexion implements crudgox{
                 $familiar->setParentezco($key['parentezco']);
                 $familiar->setFechaNac($key['fecha_nac']);
                 array_push($lista, $familiar);            
-            }        
-
+                }        
+            }
+    
         } catch(PDOException $e){
-            $e->getMessage().'error en listar de DaoAprendizImpl';
+            echo "Error al listar: " . $e->getMessage();
         } 
         return $lista;       
-    } 
+    }
 
 }
-
 ?>

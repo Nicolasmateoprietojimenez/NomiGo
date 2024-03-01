@@ -9,12 +9,12 @@
 <body>
 <?php 
 
-require('../dao/metodosUsuario.php');
-$dao=new nomiGo();
-$usuario=$dao->listar();
-require('../vista/listarUsuario.php');
+require('../dao/metodosempe.php');
+$dao=new MetodosEmpleado();
+$empleados=$dao->listar();
+require('../vista/listarempe.php');
 
-?>    
+?>
 </body>
 </html>
 

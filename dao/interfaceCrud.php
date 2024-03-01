@@ -6,6 +6,7 @@ interface crudgo{
     //public function buscar($campo,$dato);
     public function listar();
 }
+
 interface crudgox{
     public function registrar(Familia $familiar);
     public function modificar(Familia $familiar);
@@ -13,4 +14,13 @@ interface crudgox{
     //public function buscar($campo,$dato);
     public function listar();
 }
+
+interface crudgoempe{
+    public function registrar(Empleado $empe);
+    public function modificar(Empleado $empe);
+    public function eliminar(Empleado $empe);
+    //public function buscar($campo,$dato);
+    public function listar();
+}
+
 ?>
