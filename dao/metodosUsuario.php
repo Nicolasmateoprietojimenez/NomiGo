@@ -88,25 +88,44 @@ class nomiGo extends Conexion implements crudgo{
                 array_push($lista,$a);            
             }        
         }catch(PDOException $e){
-            $e->getMessage().'error en listar de DaoAprendizImpl';
+            $e->getMessage().'error en listar de Usuario :(';
         } 
         return $lista;       
     }
     
-
+    public function obtenerPordocu($docu) {
+        try {
+            $stmt = $this->getCnx()->prepare("SELECT * FROM usuario WHERE documento = ?");
+            $stmt->execute([$docu]);
+    
+            if ($stmt->rowCount() == 1) {
+                $usuario = null;
+                $row = $stmt->fetch();
+    
+                $usuario = new usuario(null,null,null,null,null,null,null,null,null,null);
+                $usuario->setDocumento($row['documento']);
+                $usuario->setNombre($row['nombre']);
+                $usuario->setApellido($row['apellido']);
+                $usuario->setLugarN($row['lugar_nac']);
+                $usuario->setFechaN($row['fecha_nac']);
+                $usuario->setFechaE($row['fecha_exp']);
+                $usuario->setGenero($row['genero']);
+                $usuario->setCorreo($row['correo']);
+                $usuario->setNombreU($row['nombre_usu']);
+                $usuario->setContrasena($row['contrasena']);
+    
+                return $usuario;
+            } else {
+                return null;
+            }
+        } catch(PDOException $e) {
+            echo "Error al obtener el usuario: " . $e->getMessage();
+            return null;
+        }
+    }
+    
+    
+    
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ?>

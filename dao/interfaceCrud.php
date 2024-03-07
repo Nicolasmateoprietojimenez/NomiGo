@@ -3,8 +3,8 @@ interface crudgo{
     public function registrar(usuario $a);
     public function modificar(usuario $a);
     public function eliminar(usuario $a);
-    //public function buscar($campo,$dato);
     public function listar();
+    public function obtenerPordocu($id_usuario);
 }
 
 interface crudgox{

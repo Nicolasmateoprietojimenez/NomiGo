@@ -32,7 +32,7 @@ class MetodosFamilia extends Conexion implements crudgox{
         $apellido = $familiar->getApellido();
         $sexo = $familiar->getSexo();
         $parentezco = $familiar->getParentezco();
-        $fecha_nac = $familiar->getFechaNac(); // Cambiado a fecha_nac
+        $fecha_nac = $familiar->getFechaNac();
         
         try {
             $stmt=$this->getCnx()->prepare("UPDATE familiar " . 
@@ -48,10 +48,10 @@ class MetodosFamilia extends Conexion implements crudgox{
         }
     }
 
-    public function eliminar(familia $familiar){ // Cambiado a familia      
-        $documento_fam = $familiar->getDocumentoFam(); // Cambiado a documento_fam
-        $stmt=$this->getCnx()->prepare("DELETE FROM familiar WHERE documento_fam = ?"); // Cambiado a familia
-        $stmt->execute([$documento_fam]); // Cambiado a documento_fam       
+    public function eliminar(familia $familiar){   
+        $documento_fam = $familiar->getDocumentoFam(); 
+        $stmt=$this->getCnx()->prepare("DELETE FROM familiar WHERE documento_fam = ?"); 
+        $stmt->execute([$documento_fam]);  
     }
 
     public function listar(){

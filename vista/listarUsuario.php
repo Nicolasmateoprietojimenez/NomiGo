@@ -23,6 +23,8 @@
                 <th>Correo</th>
                 <th>Nombre de Usuario</th>
                 <th>Contraseña</th>
+                <th>Editar</th>
+                <th>Borrar</th>
             </tr>
             </thead>
             <tbody>
@@ -37,7 +39,10 @@
                     echo "<td>". $key->getGenero() . "</td>";
                     echo "<td>". $key->getCorreo() . "</td>";
                     echo "<td>". $key->getNombreU() . "</td>";
-                    echo "<td>". $key->getContrasena() . "</td></tr>";          
+                    echo "<td>". $key->getContrasena() . "</td>";   
+                    echo '<td><a href="controladomodiusu.php?id=' . $key->getDocumento() . '"">Editar</a></td>';
+                    echo '<td><form action="controladoeliminarusu.php" method="POST" onsubmit="return confirm(\'¿Estás seguro de que quieres borrar este registro?\');">
+                    <input type="hidden" name="id" value="' . $key->getDocumento() . '"><button type="submit" class="boton">Borrar</button></form></td></tr>';
                 }?>
             </tbody>
     </table>
