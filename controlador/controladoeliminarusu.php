@@ -9,13 +9,14 @@
 <?php
 require('../dao/metodosUsuario.php');
 require('../vista/eliminarusu.php');
+
 $dao = new nomiGo();
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $documento = $_POST['documento']; 
-    $dao->eliminar($documento);
+if (isset($_GET[$documento])) {
+    $documento = $GET['documento'];
+    $usu= new nomiGo($documento,null,null,null,null,null,null,null,null,null)
+    $dao->eliminar($usu);
     header("location: controladorListaUsuario.php");
-    exit; 
 }
 ?>
 

@@ -40,9 +40,8 @@
                     echo "<td>". $key->getCorreo() . "</td>";
                     echo "<td>". $key->getNombreU() . "</td>";
                     echo "<td>". $key->getContrasena() . "</td>";   
-                    echo '<td><a href="controladomodiusu.php?id=' . $key->getDocumento() . '"">Editar</a></td>';
-                    echo '<td><form action="controladoeliminarusu.php" method="POST" onsubmit="return confirm(\'¿Estás seguro de que quieres borrar este registro?\');">
-                    <input type="hidden" name="id" value="' . $key->getDocumento() . '"><button type="submit" class="boton">Borrar</button></form></td></tr>';
+                    echo '<td><a href="controladomodiusu.php?id=' . $key->getDocumento() . '">Editar</a></td>';
+                    echo '<td><a href="controladoeliminarusu.php?documento=' . $key->getDocumento() .'">Borrar</a></td>';
                 }?>
             </tbody>
     </table>
